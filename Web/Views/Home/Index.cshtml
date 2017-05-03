@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Domain.Entities.Client>
+@{
+    ViewBag.Title = "Clientes";
+}
+<h2>Clientes</h2>
+<table class="table">
+    <tr>
+        <th>
+            Nome
+        </th>
+        <th>
+            Sobrenome
+        </th>
+        <th>
+            Idade
+        </th>
+        <th>
+            Data de Nascimento
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Age)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BirthDate)
+            </td>
+        </tr>
+    }
+</table>
